@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riego del pasto</title>
+<meta name="description" content="Seguimiento del riego de un pasto en rollo recién instalado.">
+<meta name="theme-color" content="#2f7d3b" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121a15" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Riego pasto">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <h1>Riego del pasto</h1>
+    <p>Providencia · 23 m² · instalado el 14 nov</p>
+  </header>
+  <div id="aviso-almacen" class="warn" hidden>
+    No se puede guardar en este teléfono (almacenamiento bloqueado). Los cambios se perderán al cerrar la app: usa «Exportar» en la pestaña Datos para respaldar.
+  </div>
+  <main>
+    <section id="tab-hoy" class="tab" aria-label="Hoy"></section>
+    <section id="tab-seg" class="tab" aria-label="Seguimiento" hidden></section>
+    <section id="tab-datos" class="tab" aria-label="Datos" hidden></section>
+  </main>
+  <nav class="tabbar" aria-label="Secciones">
+    <button data-act="tab" data-tab="hoy" class="on" aria-current="page"><span class="ti">💧</span>Hoy</button>
+    <button data-act="tab" data-tab="seg"><span class="ti">📅</span>Seguimiento</button>
+    <button data-act="tab" data-tab="datos"><span class="ti">💾</span>Datos</button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+</div>
+<noscript><p style="padding:1rem">Esta app necesita JavaScript.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>
